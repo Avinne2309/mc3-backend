@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello Admin!{% endblock %}
+
+{% block body %}
+    <div class="admin-container text-center">
+        <h1>Hello {{ app.user.userIdentifier }}! ✅</h1>
+        <a href="{{ path('app_user_index') }}" class="btn btn-primary mt-3">Proceed</a>
+        <a href="{{ path('app_logout') }}" class="btn btn-danger mt-3">Logout</a>
+    </div>
+{% endblock %}

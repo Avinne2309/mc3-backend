@@ -1,0 +1,170 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #FCF6F6;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.profile-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    /* max-width: 500px; */
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.profile-image {
+    margin: 0 20px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.profile-image img {
+    width: 125px;
+    height: 125px;
+}
+
+.qr-code {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+}
+
+.save-button, .share-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+}
+
+.save-button {
+    position: absolute;
+    left: 75px;
+    bottom: 50px;
+}
+
+.share-button {
+    position: absolute;
+    right: 75px;
+    bottom: 50px;
+}
+
+.personal {
+    font-size: 25px;
+    margin: 10px 0;
+    color: #000;
+}
+
+.company {
+    font-size: 25px;
+    margin: 10px 0;
+    color: #000;
+}
+
+.divider {
+    width: 65%;
+    margin: 0 auto 10px;
+    border: 0;
+    border-top: 1.5px solid #000000;
+}
+
+.name {
+    font-family: "Cinzel", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 5px 0;
+    color: #333;
+}
+
+.title {
+    font-family: "Cinzel", sans-serif;
+    font-size: 9.5px;
+    margin: 5px 0 20px;
+    color: #777777e5;
+}
+
+.contact {
+    display: flex;
+    flex-wrap: column;
+    justify-content: space-around;
+}
+
+.contact h4 {
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 16px;
+}
+
+.label-box {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #f8f2f0;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    color: #555;
+}
+
+.contact p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+.contact .personal, .contact .company {
+    width: 48%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+footer {
+    margin-top: 20px;
+    font-family: "Cinzel", sans-serif;
+    font-size: 11px;
+    border-top: 1.5px solid #000000;
+    padding-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .profile-card {
+        padding: 15px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .profile-image img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .save-button, .share-button {
+        font-size: 16px;
+        position: static;
+        margin: 10px 0;
+    }
+
+    .contact .personal, .contact .company {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
