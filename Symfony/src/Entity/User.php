@@ -29,6 +29,32 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column]
     private ?string $password = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $firstName = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $lastName = null;
+
+    #[ORM\Column(length: 255, unique: true)]
+    private ?string $personalEmail = null;
+
+    #[ORM\Column(length: 20)]
+    private ?string $mobileNumber = null;
+
+    #[ORM\Column(length: 20, nullable: true)]
+    private ?string $landlineNumber = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $companyEmail = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $companyWebsite = null;
+
+    #[ORM\Column(length: 20, nullable: true)]
+    private ?string $companyContactNumber = null;
+
+    // getters and setters for new fields...
+
     public function getId(): ?int
     {
         return $this->id;
@@ -42,6 +68,102 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setEmail(string $email): static
     {
         $this->email = $email;
+
+        return $this;
+    }
+
+    public function getFirstName(): ?string
+    {
+        return $this->firstName;
+    }
+
+    public function setFirstName(string $firstName): static
+    {
+        $this->firstName = $firstName;
+
+        return $this;
+    }
+
+    public function getLastName(): ?string
+    {
+        return $this->lastName;
+    }
+
+    public function setLastName(string $lastName): static
+    {
+        $this->lastName = $lastName;
+
+        return $this;
+    }
+
+    public function getPersonalEmail(): ?string
+    {
+        return $this->personalEmail;
+    }
+
+    public function setPersonalEmail(string $personalEmail): static
+    {
+        $this->personalEmail = $personalEmail;
+
+        return $this;
+    }
+
+    public function getMobileNumber(): ?string
+    {
+        return $this->mobileNumber;
+    }
+
+    public function setMobileNumber(string $mobileNumber): static
+    {
+        $this->mobileNumber = $mobileNumber;
+
+        return $this;
+    }
+
+    public function getLandlineNumber(): ?string
+    {
+        return $this->landlineNumber;
+    }
+
+    public function setLandlineNumber(?string $landlineNumber): static
+    {
+        $this->landlineNumber = $landlineNumber;
+
+        return $this;
+    }
+
+    public function getCompanyEmail(): ?string
+    {
+        return $this->companyEmail;
+    }
+
+    public function setCompanyEmail(string $companyEmail): static
+    {
+        $this->companyEmail = $companyEmail;
+
+        return $this;
+    }
+
+    public function getCompanyWebsite(): ?string
+    {
+        return $this->companyWebsite;
+    }
+
+    public function setCompanyWebsite(?string $companyWebsite): static
+    {
+        $this->companyWebsite = $companyWebsite;
+
+        return $this;
+    }
+
+    public function getCompanyContactNumber(): ?string
+    {
+        return $this->companyContactNumber;
+    }
+
+    public function setCompanyContactNumber(?string $companyContactNumber): static
+    {
+        $this->companyContactNumber = $companyContactNumber;
 
         return $this;
     }

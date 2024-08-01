@@ -8,6 +8,54 @@
 
         {{ form_start(registrationForm) }}
             <div class="form-group">
+                {{ form_label(registrationForm.firstName) }}
+                {{ form_widget(registrationForm.firstName, {'attr': {'class': 'form-control'}}) }}
+                {{ form_errors(registrationForm.firstName) }}
+            </div>
+            
+            <div class="form-group">
+                {{ form_label(registrationForm.lastName) }}
+                {{ form_widget(registrationForm.lastName, {'attr': {'class': 'form-control'}}) }}
+                {{ form_errors(registrationForm.lastName) }}
+            </div>
+            
+            <div class="form-group">
+                {{ form_label(registrationForm.personalEmail) }}
+                {{ form_widget(registrationForm.personalEmail, {'attr': {'class': 'form-control'}}) }}
+                {{ form_errors(registrationForm.personalEmail) }}
+            </div>
+
+            <div class="form-group">
+                {{ form_label(registrationForm.mobileNumber) }}
+                {{ form_widget(registrationForm.mobileNumber, {'attr': {'class': 'form-control'}}) }}
+                {{ form_errors(registrationForm.mobileNumber) }}
+            </div>
+
+            <div class="form-group">
+                {{ form_label(registrationForm.landlineNumber) }}
+                {{ form_widget(registrationForm.landlineNumber, {'attr': {'class': 'form-control'}}) }}
+                {{ form_errors(registrationForm.landlineNumber) }}
+            </div>
+
+            <div class="form-group">
+                {{ form_label(registrationForm.companyEmail) }}
+                {{ form_widget(registrationForm.companyEmail, {'attr': {'class': 'form-control'}}) }}
+                {{ form_errors(registrationForm.companyEmail) }}
+            </div>
+
+            <div class="form-group">
+                {{ form_label(registrationForm.companyWebsite) }}
+                {{ form_widget(registrationForm.companyWebsite, {'attr': {'class': 'form-control'}}) }}
+                {{ form_errors(registrationForm.companyWebsite) }}
+            </div>
+
+            <div class="form-group">
+                {{ form_label(registrationForm.companyContactNumber) }}
+                {{ form_widget(registrationForm.companyContactNumber, {'attr': {'class': 'form-control'}}) }}
+                {{ form_errors(registrationForm.companyContactNumber) }}
+            </div>
+
+            <div class="form-group">
                 {{ form_label(registrationForm.email) }}
                 {{ form_widget(registrationForm.email, {'attr': {'class': 'form-control'}}) }}
                 {{ form_errors(registrationForm.email) }}
