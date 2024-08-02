@@ -35,9 +35,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 255)]
     private ?string $lastName = null;
 
-    #[ORM\Column(length: 255, unique: true)]
-    private ?string $personalEmail = null;
-
     #[ORM\Column(length: 20)]
     private ?string $mobileNumber = null;
 
@@ -92,18 +89,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setLastName(string $lastName): static
     {
         $this->lastName = $lastName;
-
-        return $this;
-    }
-
-    public function getPersonalEmail(): ?string
-    {
-        return $this->personalEmail;
-    }
-
-    public function setPersonalEmail(string $personalEmail): static
-    {
-        $this->personalEmail = $personalEmail;
 
         return $this;
     }

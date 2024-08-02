@@ -6,7 +6,7 @@
     {{ parent() }}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha384-wWgnbELXtknlbONm/TyH04wV8t5jRQBJl1gl7nGScx4PQdhSuw3abvw1lg5XkUtP" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="{{ asset('css/main2.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/des2.css') }}">
 {% endblock %}
 
 {% block body %}
@@ -17,7 +17,7 @@
                 <img src="https://placehold.co/400" class="profile-pic" alt="Profile Picture">
             </div>
             <div class="card-body text-center">
-                <h2>John David Azaula</h2>
+                <h2>{{ user.firstName }} {{ user.lastName }}</h2>
                 <p class="position">Moldedcraft Intern</p>
 
                 <div class="toggle-buttons">
@@ -27,20 +27,20 @@
 
                 <div id="personalInfo" class="contact-info-section" style="align-items: center">
                     <h4 class="label-box"><b>Info</b></h4>
-                    <p class="contact-info"><i class="fa fa-envelope"></i> azaula.jdc@shc.edu.ph</p>
-                    <p class="contact-info"><i class="fa fa-phone"></i> 0927-xxx-xxxx</p>
-                    <p class="contact-info"><i class="fa fa-mobile-screen-button"></i> 0915-xxx-xxxx</p>
+                    <p class="contact-info"><i class="fa fa-envelope"></i> {{ user.email }}</p>
+                    <p class="contact-info"><i class="fa fa-phone"></i> {{ user.landlineNumber }}</p>
+                    <p class="contact-info"><i class="fa fa-mobile-screen-button"></i> {{ user.mobileNumber }}</p>
                 </div>
                 <div id="companyInfo" class="contact-info-section" style="display: none;">
                     <h4 class="label-box"><b>Info</b></h4>
                     <p class="contact-info"><i class="fa fa-building"></i> Moldedcraft Consulting</p>
-                    <p class="contact-info"><i class="fa fa-phone"></i> 0927-xxx-xxxx</p>
-                    <p class="contact-info"><i class="fa fa-mobile-screen-button"></i> 0915-xxx-xxxx</p>
-                    <p class="contact-info"><i class="fa fa-globe"></i> moldedcraft.com</p>
+                    <p class="contact-info"><i class="fa fa-envelope"></i> {{ user.companyEmail }}</p>
+                    <p class="contact-info"><i class="fa fa-phone"></i> {{ user.companyContactNumber }}</p>
+                    <p class="contact-info"><i class="fa fa-globe"></i> {{ user.companyWebsite }}</p>
                 </div>
 
                 <br><p class="description">For business inquiries, email me at:</p>
-                <a href="mailto:davidazaula@gmail.com" class="email">davidazaula@gmail.com</a>
+                <a href="mailto:davidazaula@gmail.com" class="email">{{ user.email }}</a>
             </div>
             <a href="{{ path('app_logout') }}" class="logout-button"><i class="fa fa-sign-out-alt"></i> Logout</a>
         </div>
